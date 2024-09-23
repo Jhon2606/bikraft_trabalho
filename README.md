@@ -1,7 +1,7 @@
 # bikraft_trabalho
 Trabalho de Engenharia de Software
 
-03 de setembro de 2024 —————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+03 de setembro de 2024 —————————————————————
 
 A estrutura da página inicial foi montada
 
@@ -15,7 +15,7 @@ Depoimento (Section): Exibe o testemunho de uma cliente satisfeita com os produt
 Seguros (Article): Apresenta os planos de seguros "Prata" e "Ouro", com seus respectivos preços e benefícios, além de um botão para solicitar a inscrição.
 Footer: Inclui dados de contato, conexões com redes sociais, menu extra de navegação e aviso de direitos autorais.
 
-06 de setembro de 2024 —————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+06 de setembro de 2024 —————————————————————
 
 Adicionei estilos responsivos e interativos para as bicicletas
 
@@ -49,8 +49,7 @@ Ajustes para dispositivos menores:
 Reduz o espaçamento inferior da lista de bicicletas de 120px para 60px (padding-bottom: 60px) para melhorar o layout em telas pequenas.
 Reduz o espaçamento entre os itens da lista de 40px para 20px (gap: 20px) para melhor adequação em telas menores.
 
-09 de setembro de 2024 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-
+09 de setembro de 2024 —————————————————————
 Foram atualizados os estilos para a seção de depoimento
 
 .depoimento
@@ -113,7 +112,7 @@ Foi feito a estilização para sessão de tecnologia
 - Faz ajustes de responsividade para telas menores: remove a sombra interna em telas com largura máxima de 800px, muda o layout de grid para uma coluna e oculta a imagem da tecnologia.
 - Adiciona estilos específicos para dispositivos com largura máxima de 600px, modificando a direção dos itens em .tecnologia-vantagens para coluna.
 
-13 de setembro de 2024 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+13 de setembro de 2024 —————————————————————
 
 Termos de Uso
 Este é um arquivo de uma página a parte do site que contém os termos de uso da empresa Bikcraft.
@@ -139,7 +138,7 @@ Neste arquivo temos a estilização de todas as cores utilizadas no site atravé
 Adição de estilo nas tipografias
 Neste arquivo estilizamos todas as fontes que foram utilizadas no site, definindo então seu tamanho, peso e tipo de fonte, como também realizamos a responsividade.
 
-17 de setembro de 2024 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+17 de setembro de 2024 —————————————————————
 
 Adiciona ícone SVG
 bikcraft: Incluímos um ícone SVG personalizado com dimensões de 136 x 32 pixels. O ícone representa uma forma com contornos distintos e é preenchido com a cor branca (#fff). Utilizamos um único elemento `<path>` para definir o design do ícone, com coordenadas e comandos específicos para criar a forma desejada, e será utilizado  para aprimorar a interface do usuário.
@@ -147,7 +146,7 @@ bikcraft: Incluímos um ícone SVG personalizado com dimensões de 136 x 32 pixe
 Adicional imagem de bicicleta
 Incluímos imagens representando bicicletas, que serão utilizadas como base para a criação das imagens do anúncio das vendas dos produtos.
 
-21 de setembro de 2024 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+21 de setembro de 2024 —————————————————————
 
 
 Foi adicionado e editado estilos na página de Termos e Condições
@@ -257,9 +256,7 @@ Imagens utilizadas pra demonstrar a localização e endereço das lojas, para po
 imagens para pagina inicial
 Imagens utilizadas para ilustrar as mensagens de introdução e depoimento, e serviços como serviços de seguro e tecnologia.
 
-23 de setembro de 2024 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-
-SVG canto inferior esquerdo
+23 de setembro de 2024 —————————————————————
 Implementa um gráfico SVG com uma matriz de 16 círculos distribuídos em uma grade 4x4, o layout utiliza um canvas de 52x52 pixels. Cada linha contém um círculo posicionado de forma alternada entre os eixos x e y. A estrutura é definida com um atributo path para otimizar o código e manter a uniformidade dos elementos visuais A estrutura utiliza um caminho (path) para otimizar o código e garantir consistência visual, a disposição parte do canto inferior esquerdo.
 
 SVG canto inferior direito
