@@ -1,7 +1,7 @@
 # bikraft_trabalho
 Trabalho de Engenharia de Software
 
-03 de setembro de 2024 —————————————————————
+03 de setembro de 2024 ——————————————————————————————————————————
 
 A estrutura da página inicial foi montada
 
@@ -15,21 +15,28 @@ Depoimento (Section): Exibe o testemunho de uma cliente satisfeita com os produt
 Seguros (Article): Apresenta os planos de seguros "Prata" e "Ouro", com seus respectivos preços e benefícios, além de um botão para solicitar a inscrição.
 Footer: Inclui dados de contato, conexões com redes sociais, menu extra de navegação e aviso de direitos autorais.
 
-06 de setembro de 2024 —————————————————————
+06 de setembro de 2024 ——————————————————————————————————————————
 
 Adicionei estilos responsivos e interativos para as bicicletas
 
 .bicicletas-lista:
+
 Define o espaçamento superior e inferior da seção que exibe a lista de bicicletas, garantindo um layout arejado e espaçado com padding-top: 60px e padding-bottom: 120px.
+
 .bicicletas-lista h2:
+
 Ajusta o espaçamento inferior do título (<h2>) da seção de bicicletas, adicionando margin-bottom: 40px para criar espaço entre o título e a lista.
+
 .bicicletas-lista ul:
+
 Estabelece a estrutura de layout em grade para os itens da lista com display: flex e define um espaçamento entre eles com gap: 40px.
 Garante que a lista ocupe o máximo de espaço horizontal dentro de um limite de 1400px (max-width: 1400px).
 Centraliza a lista horizontalmente usando margin-left: auto e margin-right: auto.
 Permite que a lista seja rolada horizontalmente quando o conteúdo exceder a largura da tela com overflow-x: auto.
 Adiciona preenchimento interno com padding: 0 20px 20px 20px.
+
 .bicicletas-lista li:
+
 Define o comportamento dos itens individuais da lista, tornando-os flexíveis e garantindo que cada item ocupe no mínimo 280px de largura (min-width: 280px).
 .bicicletas-lista a:
 Garante que o link que envolve cada bicicleta seja exibido como um bloco com display: block, permitindo que o clique seja válido em toda a área do item.
