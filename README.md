@@ -1,7 +1,7 @@
 # bikraft_trabalho
 Trabalho de Engenharia de Software
 
-03 de setembro de 2024 ——————————————————————————————————————————
+03 de setembro de 2024 —————————————————————
 
 A estrutura da página inicial foi montada
 
@@ -15,20 +15,17 @@ Depoimento (Section): Exibe o testemunho de uma cliente satisfeita com os produt
 Seguros (Article): Apresenta os planos de seguros "Prata" e "Ouro", com seus respectivos preços e benefícios, além de um botão para solicitar a inscrição.
 Footer: Inclui dados de contato, conexões com redes sociais, menu extra de navegação e aviso de direitos autorais.
 
-06 de setembro de 2024 ——————————————————————————————————————————
+06 de setembro de 2024 —————————————————————
 
 Adicionei estilos responsivos e interativos para as bicicletas
 
 .bicicletas-lista:
-
 Define o espaçamento superior e inferior da seção que exibe a lista de bicicletas, garantindo um layout arejado e espaçado com padding-top: 60px e padding-bottom: 120px.
 
 .bicicletas-lista h2:
-
 Ajusta o espaçamento inferior do título (<h2>) da seção de bicicletas, adicionando margin-bottom: 40px para criar espaço entre o título e a lista.
 
 .bicicletas-lista ul:
-
 Estabelece a estrutura de layout em grade para os itens da lista com display: flex e define um espaçamento entre eles com gap: 40px.
 Garante que a lista ocupe o máximo de espaço horizontal dentro de um limite de 1400px (max-width: 1400px).
 Centraliza a lista horizontalmente usando margin-left: auto e margin-right: auto.
@@ -36,43 +33,57 @@ Permite que a lista seja rolada horizontalmente quando o conteúdo exceder a lar
 Adiciona preenchimento interno com padding: 0 20px 20px 20px.
 
 .bicicletas-lista li:
-
 Define o comportamento dos itens individuais da lista, tornando-os flexíveis e garantindo que cada item ocupe no mínimo 280px de largura (min-width: 280px).
+
 .bicicletas-lista a:
 Garante que o link que envolve cada bicicleta seja exibido como um bloco com display: block, permitindo que o clique seja válido em toda a área do item.
+
 .bicicletas-lista img:
 Adiciona um espaçamento inferior de 16px para separar a imagem da descrição com margin-bottom: 16px.
+
 .bicicletas-lista h3:
 Adiciona um espaçamento inferior de 8px entre o título do modelo da bicicleta e o preço, além de garantir o alinhamento dos itens internos com display: flex e align-items: center.
+
 .bicicletas-lista h3::before:
 Adiciona um pequeno ícone retangular antes do título (h3) da bicicleta usando ::before. O ícone tem height: 8px, width: 12px e usa a cor primária definida por var(--cor-p1).
 A transição de largura do ícone é configurada com transition: width 0.2s.
+
 .bicicletas-lista a:hover h3::before:
 Quando o link que envolve a bicicleta é "hovered" (passa o mouse sobre), a largura do ícone antes do título aumenta de 12px para 24px, criando um efeito visual interessante.
+
 .bicicletas-lista li span:
 Adiciona um preenchimento à esquerda do preço da bicicleta, criando um espaçamento de 20px com padding-left: 20px.
+
 Responsividade - @media (max-width: 800px):
 Ajustes para dispositivos menores:
 Reduz o espaçamento inferior da lista de bicicletas de 120px para 60px (padding-bottom: 60px) para melhorar o layout em telas pequenas.
 Reduz o espaçamento entre os itens da lista de 40px para 20px (gap: 20px) para melhor adequação em telas menores.
 
 09 de setembro de 2024 —————————————————————
+
 Foram atualizados os estilos para a seção de depoimento
 
 .depoimento
 Configura o layout da seção de depoimentos usando o grid com duas colunas de tamanho igual (1fr 1fr). Aplica a cor de fundo principal (var(--cor-p1)). O uso de overflow: hidden impede que qualquer conteúdo que ultrapasse os limites da caixa seja exibido, mantendo o visual mais organizado.
+
 .depoimento img
 As imagens dentro da seção são ajustadas para ocupar 100% da largura e altura do elemento pai. A propriedade object-fit: cover garante que as imagens sejam ajustadas proporcionalmente dentro do espaço, sem distorções. Além disso, as bordas arredondadas são removidas com border-radius: 0px, deixando as imagens com bordas retas.
+
 .depoimento-conteudo
 O espaçamento interno (padding) é definido com 40px nas laterais e 80px na parte inferior, permitindo mais espaço para o conteúdo textual. A propriedade align-self: end alinha o conteúdo ao final da área definida pelo grid, posicionando o texto mais próximo da parte inferior da seção.
+
 .depoimento-conteudo p
 O parágrafo tem sua largura limitada a 32 caracteres (max-width: 32ch), mantendo o texto mais conciso e legível. A fonte utilizada é "Merriweather", com estilo serifado, itálico e peso de 900, para dar destaque ao depoimento. Um espaçamento inferior de 32px é adicionado para separar o parágrafo de outros elementos. A posição relativa é usada para inserir aspas decorativas.
+
 .depoimento p::before, .depoimento p::after
 Esses elementos inserem aspas estilizadas antes e depois do parágrafo. As aspas são grandes (font-size: 5rem) e usam a cor secundária definida (var(--cor-p2)). A propriedade position: absolute permite que as aspas sejam posicionadas de maneira independente do fluxo natural do texto.
+
 .depoimento p::before
 Adiciona a aspas de abertura (“) antes do início do parágrafo, posicionando-a um pouco à esquerda e acima do texto (left: -50px; top: -20px).
+
 .depoimento p::after
 Adiciona a aspas de fechamento (”) no final do parágrafo.
+
 @media (max-width: 800px)
 Ajustes para telas com largura de até 800px. O layout é reorganizado para uma única coluna (grid-template-columns: 1fr),ajudando na visualização em dispositivos menores. O texto é centralizado (text-align: center). A altura máxima das imagens é limitada a 200px, para não ocupar muito espaço na tela. O espaçamento interno da classe .depoimento-conteudo é ajustado para 40px nas laterais e 20px na parte inferior, deixando um layout mais compacto e centralizado (margin: auto).
 
@@ -80,16 +91,22 @@ Foi feito a estilização da sessão de introdução
 
 .introducao-bg
 Define o fundo da seção de introdução com a cor var(--cor-12), de acordo com as cores estabelecidas no tema do site. Além disso, cria uma sombra interna (box-shadow: inset 0 -120px var(--cor-0)) que gera um efeito de profundidade no fundo, especialmente na parte inferior da seção.
+
 .introducao
 Usa o layout de grid com duas colunas iguais (grid-template-columns: 1fr 1fr), permitindo que o conteúdo e a imagem fiquem lado a lado. O espaçamento entre as colunas é de 40px, garantindo que os elementos não fiquem muito colados.
+
 .introducao-conteudo
 Essa classe faz com que o conteúdo textual fique alinhado no final da coluna com align-self: end, criando um visual mais equilibrado, com o texto próximo do rodapé da seção. Também adiciona um espaçamento inferior (padding) de 200px para garantir que o conteúdo tenha um respiro adequado.
+
 .introducao img
 As imagens são configuradas para ocupar 100% da largura e altura do contêiner, garantindo que se ajustem perfeitamente ao espaço disponível. O object-fit: cover faz com que a imagem seja cortada proporcionalmente para evitar distorção. Os cantos das imagens são levemente arredondados com border-radius: 4px, suavizando o visual.
+
 .introducao h1
 A margem inferior do título é definida em 32px, para que haja uma boa separação entre o título e os elementos seguintes, o que melhora a hierarquia visual.
+
 .introducao p
 Os parágrafos também têm uma margem inferior de 20px, criando espaço suficiente entre os blocos de texto, o que facilita a leitura e evita que o conteúdo fique amontoado.
+
 @media (max-width: 800px)
 Quando a tela é menor que 800px (como em smartphones), algumas alterações são feitas para garantir que o design continue funcional e agradável:
 A cor de fundo muda para var(--cor-11), que é mais adequada para telas pequenas, e também é adicionado um padding-top de 40px para ajustar o espaço no topo da seção.
@@ -122,12 +139,15 @@ Foi feito a estilização para sessão de tecnologia
 13 de setembro de 2024 —————————————————————
 
 Termos de Uso
+
 Este é um arquivo de uma página a parte do site que contém os termos de uso da empresa Bikcraft.
 
 Adição de estilo global
+
 Neste arquivo foi colocado estilos específicos para algumas tags.
 
 Adição de estilo do cabeçalho
+
 Neste arquivo estilizamos o header e fizemos a responsividade.
 
 Adição de estilo do rodapé
@@ -155,8 +175,8 @@ Incluímos imagens representando bicicletas, que serão utilizadas como base par
 
 21 de setembro de 2024 —————————————————————
 
-
 Foi adicionado e editado estilos na página de Termos e Condições
+
 Estilos específicos para a página de Termos e Condições, incluindo espaçamentos e formatação de títulos e parágrafos. O arquivo ajusta margens e define uma largura máxima de linha para melhorar a legibilidade.
 
 Organizando as que são de estilo
@@ -230,7 +250,8 @@ O ícone SVG representa "caravan", parceiro comercial e colaboração. Com dimen
 Ícone da logomarca "lescone"
 Ícone SVG da logomarca "lescone" com dimensões de 208x41 pixels. O design utiliza um preenchimento cinza (#9C9C9C).
 
-Ícone da logomarca "besta selvagem"
+
+Ícone da logomarca "wildbeast"
 Ícone SVG da logomarca "wildbeast" com dimensões de 196x34 pixels. O design apresenta um preenchimento cinza (#9C9C9C) .
 
 Ícone da logomarca "surfbot"
@@ -264,13 +285,16 @@ imagens para pagina inicial
 Imagens utilizadas para ilustrar as mensagens de introdução e depoimento, e serviços como serviços de seguro e tecnologia.
 
 23 de setembro de 2024 —————————————————————
+
+SVG canto inferior esquerdo
 Implementa um gráfico SVG com uma matriz de 16 círculos distribuídos em uma grade 4x4, o layout utiliza um canvas de 52x52 pixels. Cada linha contém um círculo posicionado de forma alternada entre os eixos x e y. A estrutura é definida com um atributo path para otimizar o código e manter a uniformidade dos elementos visuais A estrutura utiliza um caminho (path) para otimizar o código e garantir consistência visual, a disposição parte do canto inferior esquerdo.
 
 SVG canto inferior direito
 Incorporamos um ícone SVG ao nosso repositório. O ícone foi projetado com dimensões de 52x52 pixels e preenchido com uma cor cinza translúcida que implementa uma matriz de 20 círculos organizados em uma grade, partindo da parte inferior direita. A estrutura foi otimizada com o uso de um caminho (path) único, sendo ancorado no canto inferior direito da tela.
 
+
 SVG canto inferior direito-p
-orporamos o ícone SVG com dimensões de 52x52 pixels e preenchido com uma cor amarelo-dourada (#E4A30B). O uso de um único caminho (path) otimiza a estrutura do SVG, garantindo uma renderização eficiente e consistente. O padrão dos círculos segue uma disposição equidistante ao longo dos eixos x e y, sendo ancorado no canto inferior direito da tela.
+Incorporamos o ícone SVG com dimensões de 52x52 pixels e preenchido com uma cor amarelo-dourada (#E4A30B). O uso de um único caminho (path) otimiza a estrutura do SVG, garantindo uma renderização eficiente e consistente. O padrão dos círculos segue uma disposição equidistante ao longo dos eixos x e y, sendo ancorado no canto inferior direito da tela.
 
 SVG canto superior esquerdo-p
 O ícone é um SVG com dimensões de 52x52 pixels e preenchido com uma cor amarelo-dourada (#E4A30B). A composição inclui 20 círculos. O uso de um caminho único (path) otimiza a estrutura do SVG, com os círculos organizados em linhas que começam do canto superior esquerdo e preenchem a área de forma progressiva.
