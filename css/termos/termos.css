@@ -1,18 +1,22 @@
+/* Define o espaçamento superior e inferior da seção de termos */
 .termos {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 80px;  /* Espaço de 80px no topo */
+  padding-bottom: 80px;  /* Espaço de 80px na parte inferior */
 }
 
+/* Estiliza os elementos <h2> dentro da seção de termos */
 .termos h2 {
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-weight: 600;  /* Define o peso da fonte como 600 (semi-negrito) */
+  margin-bottom: 20px;  /* Adiciona uma margem inferior de 20px */
 }
 
+/* Adiciona uma margem superior maior para os <h2> que seguem um parágrafo */
 .termos p + h2 {
-  margin-top: 40px;
+  margin-top: 40px;  /* Define uma margem superior de 40px */
 }
 
+/* Estiliza os parágrafos dentro da seção de termos */
 .termos p {
-  max-width: 75ch;
-  margin-bottom: 24px;
+  max-width: 75ch;  /* Define a largura máxima dos parágrafos em 75 caracteres */
+  margin-bottom: 24px;  /* Adiciona uma margem inferior de 24px */
 }
