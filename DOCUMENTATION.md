@@ -39,7 +39,7 @@ Desenvolver um site dinâmico e adaptável, que permita a venda de bicicletas el
 - **Acessibilidade:** Seguir práticas que garantam que pessoas com deficiência possam navegar no site, como textos alternativos para imagens e bom contraste de cores.
 
 ## 4. Cronograma
-
+![TAbela 1 - Cronograma do projeto](cronograma.png)
 
 ## 5. Conclusão
 O projeto **Bikcraft** pretende ser uma referência para quem busca bicicletas elétricas que combinem **design** e **alta tecnologia**. Cada etapa do desenvolvimento foi cuidadosamente planejada para garantir que o cliente tenha uma experiência agradável e sem complicações. Nosso foco é unir inovação, funcionalidade e acessibilidade, criando um site que atenda às expectativas do mercado e dos nossos clientes.
