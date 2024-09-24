@@ -1,394 +1,488 @@
 # Bikraft
-Trabalho de Engenharia de Software
+---
+*03 de setembro de 2024*
+
+## Estrutura da Página Inicial
+
+A página inicial do site da **Bikraft** foi projetada com uma organização clara e funcional, dividida nas seguintes seções:
+
+### 1. Head
+- Contém o **título da página** e uma **breve descrição**.
+- Links para a folha de estilos **CSS** e fontes externas para estilizar o conteúdo.
+
+### 2. Header
+- Apresenta o **logotipo da empresa**.
+- Inclui um **menu de navegação** com links para as demais páginas do site.
+
+### 3. Main
+- Apresenta uma **introdução** com um título impactante e uma breve descrição dos produtos disponíveis.
+- Inclui um botão de chamada para ação **"Escolha a sua"**, que redireciona para a página de bicicletas.
+- Exibe uma **imagem de uma bicicleta elétrica**.
+
+### 4. Lista de Bicicletas (Article)
+- Exibe uma relação de produtos com **imagens, nomes e valores**.
+- Cada item é clicável, levando a uma página com **mais detalhes** do produto.
+
+### 5. Tecnologia (Article)
+- Destaque para as **vantagens tecnológicas** das bicicletas.
+- Contém **textos explicativos** e **imagens ilustrativas**.
+
+### 6. Parceiros (Section)
+- Apresenta uma **lista de logos** de empresas parceiras.
+
+### 7. Depoimento (Section)
+- Exibe o **testemunho** de uma cliente satisfeita com os produtos.
+
+### 8. Seguros (Article)
+- Apresenta os planos de seguros **"Prata"** e **"Ouro"**, com seus respectivos **preços e benefícios**.
+- Inclui um botão para **solicitar inscrição**.
+
+### 9. Footer
+- Contém **dados de contato**, links para **redes sociais**, um menu extra de navegação e o aviso de **direitos autorais**.
+
+---
+*06 de setembro de 2024*
+## Adição de Estilos Responsivos e Interativos
+
+Nesta atualização, foram adicionados estilos responsivos e interativos para a exibição da lista de bicicletas, visando melhorar a usabilidade e a experiência do usuário em diferentes dispositivos.
+
+### 1. `.bicicletas-lista`
+- Define o espaçamento superior e inferior da seção que exibe a lista de bicicletas:
+  - `padding-top: 60px`
+  - `padding-bottom: 120px`
+  
+### 2. `.bicicletas-lista h2`
+- Ajusta o espaçamento inferior do título (h2) da seção de bicicletas:
+  - `margin-bottom: 40px`
+
+### 3. `.bicicletas-lista ul`
+- Estabelece a estrutura de layout em grade para os itens da lista com:
+  - `display: flex`
+  - `gap: 40px`
+- Limita a largura máxima da lista em `max-width: 1400px`.
+- Centraliza a lista horizontalmente com:
+  - `margin-left: auto`
+  - `margin-right: auto`
+- Permite rolagem horizontal com:
+  - `overflow-x: auto`
+- Adiciona preenchimento interno:
+  - `padding: 0 20px 20px 20px`
+
+### 4. `.bicicletas-lista li`
+- Define o comportamento flexível dos itens, garantindo uma largura mínima de:
+  - `min-width: 280px`
+
+### 5. `.bicicletas-lista a`
+- Garante que o link que envolve cada bicicleta seja um bloco completo:
+  - `display: block`
+
+### 6. `.bicicletas-lista img`
+- Adiciona espaçamento inferior para separar a imagem da descrição:
+  - `margin-bottom: 16px`
+
+### 7. `.bicicletas-lista h3`
+- Define o espaçamento entre o título do modelo da bicicleta e o preço:
+  - `margin-bottom: 8px`
+- Alinha os itens internamente com:
+  - `display: flex`
+  - `align-items: center`
+
+### 8. `.bicicletas-lista h3::before`
+- Adiciona um ícone retangular antes do título da bicicleta com:
+  - `height: 8px`
+  - `width: 12px`
+  - Cor primária: `var(--cor-p1)`
+- Configura a transição da largura do ícone:
+  - `transition: width 0.2s`
+
+### 9. `.bicicletas-lista a:hover h3::before`
+- Ao passar o mouse sobre o link da bicicleta, a largura do ícone aumenta de:
+  - `width: 12px` para `24px`, criando um efeito visual interativo.
+
+### 10. `.bicicletas-lista li span`
+- Adiciona preenchimento à esquerda do preço da bicicleta:
+  - `padding-left: 20px`
+
+---
+
+## Responsividade
+
+### 11. `@media (max-width: 800px)`
+Para melhorar a visualização em dispositivos menores:
+- Reduz o espaçamento inferior da lista de bicicletas de `120px` para `60px`.
+- Diminui o espaçamento entre os itens de `40px` para `20px`.
+
+---
+*09 de setembro de 2024*
+## Atualização dos Estilos - Seção de Depoimento
+
+### 1. `.depoimento`
+- Configura o layout da seção de depoimentos com **grid** em duas colunas de tamanho igual:
+  - `grid-template-columns: 1fr 1fr`
+- Aplica a cor de fundo principal:
+  - `background-color: var(--cor-p1)`
+- Impede que conteúdo excedente seja exibido:
+  - `overflow: hidden`
+
+### 2. `.depoimento img`
+- Ajusta as imagens para ocupar 100% da largura e altura do contêiner:
+  - `object-fit: cover`
+- Remove as bordas arredondadas:
+  - `border-radius: 0px`
+
+### 3. `.depoimento-conteudo`
+- Define o espaçamento interno:
+  - `padding: 0 40px 80px`
+- Alinha o conteúdo ao final da área do grid:
+  - `align-self: end`
+
+### 4. `.depoimento-conteudo p`
+- Limita a largura do parágrafo a 32 caracteres:
+  - `max-width: 32ch`
+- Aplica a fonte serifada, itálica e em negrito:
+  - `font-family: "Merriweather", serif`
+  - `font-style: italic`
+  - `font-weight: 900`
+- Adiciona espaçamento inferior de 32px e aspas decorativas com `position: relative`.
+
+### 5. `.depoimento p::before, .depoimento p::after`
+- Insere aspas estilizadas com:
+  - `font-size: 5rem`
+  - `color: var(--cor-p2)`
+  - `position: absolute`
+
+#### `.depoimento p::before`
+- Insere aspas de abertura (“) antes do parágrafo, posicionadas à esquerda e acima:
+  - `left: -50px`
+  - `top: -20px`
+
+#### `.depoimento p::after`
+- Insere aspas de fechamento (”) ao final do parágrafo.
+
+### 6. Responsividade - `@media (max-width: 800px)`
+- O layout muda para uma única coluna:
+  - `grid-template-columns: 1fr`
+- O texto é centralizado:
+  - `text-align: center`
+- Limita a altura das imagens a 200px.
+- O espaçamento interno da `.depoimento-conteudo` é ajustado para:
+  - `padding: 0 40px 20px`
+  - `margin: auto`
 
-03 de setembro de 2024
+---
 
-A estrutura da página inicial foi montada
+## Atualização dos Estilos - Seção de Introdução
 
-Head: Contém o título da página e uma breve descrição, juntamente com links para a folha de estilos CSS e fontes para estilizar o conteúdo.
+### 1. `.introducao-bg`
+- Define o fundo da introdução com a cor `var(--cor-12)` e uma sombra interna:
+  - `box-shadow: inset 0 -120px var(--cor-0)`
 
-Header: Inclui o logotipo da empresa e um menu de navegação com links para outras páginas.
+### 2. `.introducao`
+- Utiliza **grid** com duas colunas iguais:
+  - `grid-template-columns: 1fr 1fr`
+- Define um espaçamento entre colunas de 40px.
 
-Main: Apresenta uma introdução com um título impactante, uma breve descrição dos produtos disponíveis e um botão de chamada para ação "Escolha a sua", que direciona para a página de bicicletas, acompanhado de uma imagem de uma bicicleta elétrica.
+### 3. `.introducao-conteudo`
+- Alinha o conteúdo ao final da coluna:
+  - `align-self: end`
+- Adiciona um espaçamento inferior de 200px.
 
-Lista de Bicicletas (Article): Mostra uma relação de produtos com imagens, nomes e valores. Cada item é clicável, levando a uma página com mais detalhes.
+### 4. `.introducao img`
+- As imagens ocupam 100% da largura e altura do contêiner:
+  - `object-fit: cover`
+  - `border-radius: 4px`
 
-Tecnologia (Article): Destaca as vantagens tecnológicas das bicicletas, com textos explicativos e imagens ilustrativas.
+### 5. `.introducao h1`
+- Define a margem inferior do título:
+  - `margin-bottom: 32px`
 
-Parceiros (Section): Apresenta uma lista de logos de empresas parceiras.
+### 6. `.introducao p`
+- Define a margem inferior dos parágrafos:
+  - `margin-bottom: 20px`
 
-Depoimento (Section): Exibe o testemunho de uma cliente satisfeita com os produtos.
+### 7. Responsividade - `@media (max-width: 800px)`
+- A cor de fundo muda para `var(--cor-11)` e o padding superior para 40px.
+- A sombra interna é reduzida:
+  - `box-shadow: inset 0 -60px #ffffff`
+- O grid passa a uma coluna, e o espaçamento entre elementos é ajustado para 32px.
+- A altura das imagens é limitada a 300px.
+- O padding inferior da `.introducao-conteudo` é removido.
 
-Seguros (Article): Apresenta os planos de seguros "Prata" e "Ouro", com seus respectivos preços e benefícios, além de um botão para solicitar a inscrição.
+---
 
-Footer: Inclui dados de contato, conexões com redes sociais, menu extra de navegação e aviso de direitos autorais.
+## Atualização dos Estilos - Seção de Parceiros
 
-06 de setembro de 2024
+### 1. `.parceiros`
+- Define o padding superior e inferior da seção para garantir um bom espaçamento.
+- Ajusta o padding inferior em telas menores (máx. 800px).
 
-Adicionei estilos responsivos e interativos para as bicicletas
+### 2. `.parceiros ul`
+- Aplica um layout de **grid** com 4 colunas para telas maiores e 2 colunas para telas menores.
+- Estiliza bordas verticais e horizontais nos itens da lista.
 
-.bicicletas-lista:
+### 3. Responsividade - `@media (max-width: 800px)`
+- Ajustes no layout, margens e espaçamento para telas menores.
 
-Define o espaçamento superior e inferior da seção que exibe a lista de bicicletas, garantindo um layout arejado e espaçado com padding-top: 60px e padding-bottom: 120px.
+---
 
-.bicicletas-lista h2:
+## Atualização dos Estilos - Seção de Tecnologia
 
-Ajusta o espaçamento inferior do título (h2) da seção de bicicletas, adicionando margin-bottom: 40px para criar espaço entre o título e a lista.
+### 1. `.tecnologia-bg`
+- Define a cor de fundo e adiciona uma sombra interna para criar profundidade:
+  - `box-shadow: inset`
 
-.bicicletas-lista ul:
+### 2. `.tecnologia`
+- Configura o layout com duas colunas e um espaçamento de 40px.
 
-Estabelece a estrutura de layout em grade para os itens da lista com display: flex e define um espaçamento entre eles com gap: 40px.
+### 3. `.tecnologia-imagem`
+- As imagens preenchem completamente o contêiner com:
+  - `object-fit: cover`
+  - `object-position: left`
 
-Garante que a lista ocupe o máximo de espaço horizontal dentro de um limite de 1400px (max-width: 1400px).
+### 4. `.tecnologia-conteudo`
+- Define espaçamento superior e inferior para equilibrar o layout.
 
-Centraliza a lista horizontalmente usando margin-left: auto e margin-right: auto.
+### 5. `.tecnologia-vantagens`
+- Layout flexível com ajustes no espaçamento e largura das imagens.
 
-Permite que a lista seja rolada horizontalmente quando o conteúdo exceder a largura da tela com overflow-x: auto.
+### 6. Responsividade - `@media (max-width: 800px)`
+- Remove a sombra interna e altera o layout para uma coluna.
+- A imagem da tecnologia é ocultada.
 
-Adiciona preenchimento interno com padding: 0 20px 20px 20px.
+### 7. Responsividade - `@media (max-width: 600px)`
+- Modifica a direção dos itens para coluna.
 
-.bicicletas-lista li:
+---
+*13 de setembro de 2024*
+## Termos de Uso
 
-Define o comportamento dos itens individuais da lista, tornando-os flexíveis e garantindo que cada item ocupe no mínimo 280px de largura (min-width: 280px).
+Criamos uma página separada para os **Termos de Uso** da Bikraft. Essa página contém todas as condições e políticas da empresa.
 
-.bicicletas-lista a:
+---
 
-Garante que o link que envolve cada bicicleta seja exibido como um bloco com display: block, permitindo que o clique seja válido em toda a área do item.
+## Adição de Estilos Globais
 
-.bicicletas-lista img:
+Foram adicionados estilos específicos para diversas **tags** do site, garantindo uma padronização no layout e comportamento dos elementos em todo o projeto.
 
-Adiciona um espaçamento inferior de 16px para separar a imagem da descrição com margin-bottom: 16px.
+---
 
-.bicicletas-lista h3:
+## Adição de Estilo no Cabeçalho
 
-Adiciona um espaçamento inferior de 8px entre o título do modelo da bicicleta e o preço, além de garantir o alinhamento dos itens internos com display: flex e align-items: center.
+Estilizamos o **header** (cabeçalho) do site, assegurando sua compatibilidade com diferentes tamanhos de tela e dispositivos, aplicando técnicas de **responsividade**.
 
-.bicicletas-lista h3::before:
+---
 
-Adiciona um pequeno ícone retangular antes do título (h3) da bicicleta usando ::before. O ícone tem height: 8px, width: 12px e usa a cor primária definida por var(--cor-p1).
+## Adição de Estilo no Rodapé
 
-A transição de largura do ícone é configurada com transition: width 0.2s.
+Da mesma forma, o **footer** (rodapé) foi estilizado para manter a consistência visual, garantindo também a **responsividade** para diferentes dispositivos.
 
-.bicicletas-lista a:hover h3::before:
+---
 
-Quando o link que envolve a bicicleta é "hovered" (passa o mouse sobre), a largura do ícone antes do título aumenta de 12px para 24px, criando um efeito visual interessante.
+## Adição de Estilo na Seção de Seguros
 
-.bicicletas-lista li span:
+A seção de **Seguros** recebeu uma estilização própria, incluindo ajustes responsivos para se adaptar corretamente em dispositivos móveis e telas menores.
 
-Adiciona um preenchimento à esquerda do preço da bicicleta, criando um espaçamento de 20px com padding-left: 20px.
+---
 
-Responsividade - @media (max-width: 800px):
+## Adição de Estilo para Componentes
 
-Ajustes para dispositivos menores:
+Criamos estilos para componentes individuais através de **classes** presentes no index, facilitando a reutilização e personalização de elementos em todo o site. A responsividade também foi implementada.
 
-Reduz o espaçamento inferior da lista de bicicletas de 120px para 60px (padding-bottom: 60px) para melhorar o layout em telas pequenas.
+---
 
-Reduz o espaçamento entre os itens da lista de 40px para 20px (gap: 20px) para melhor adequação em telas menores.
+## Adição de Estilos de Cores
 
-09 de setembro de 2024
+Foi criada uma estilização completa para todas as cores utilizadas no site, utilizando **pseudo-seletores** e **classes**. Isso garante que a paleta de cores siga o padrão visual estabelecido.
 
-Foram atualizados os estilos para a seção de depoimento
+---
 
-.depoimento
+## Adição de Estilos nas Tipografias
 
-Configura o layout da seção de depoimentos usando o grid com duas colunas de tamanho igual (1fr 1fr). Aplica a cor de fundo principal (var(--cor-p1)). O uso de overflow: hidden impede que qualquer conteúdo que ultrapasse os limites da caixa seja exibido, mantendo o visual mais organizado.
+Estilizamos todas as **fontes** do site, especificando tamanho, peso e tipo de fonte. Ajustes de responsividade também foram aplicados para manter a legibilidade em diferentes tamanhos de tela.
 
-.depoimento img
+---
+*17 de setembro de 2024*
+## Adição de Ícone SVG
 
-As imagens dentro da seção são ajustadas para ocupar 100% da largura e altura do elemento pai. A propriedade object-fit: cover garante que as imagens sejam ajustadas proporcionalmente dentro do espaço, sem distorções. Além disso, as bordas arredondadas são removidas com border-radius: 0px, deixando as imagens com bordas retas.
+Foi adicionado um ícone **SVG** personalizado com dimensões de 136x32 pixels. Este ícone, preenchido com a cor branca (`#fff`), representa uma forma com contornos distintos, criada através de um único elemento `<path>`, com coordenadas e comandos precisos. O ícone aprimora a interface do usuário ao adicionar um toque visual exclusivo.
 
-.depoimento-conteudo
+---
 
-O espaçamento interno (padding) é definido com 40px nas laterais e 80px na parte inferior, permitindo mais espaço para o conteúdo textual. A propriedade align-self: end alinha o conteúdo ao final da área definida pelo grid, posicionando o texto mais próximo da parte inferior da seção.
+## Adição de Imagem de Bicicleta
 
-.depoimento-conteudo p
+Foram incluídas imagens representando **bicicletas**, que serão usadas como base nos anúncios de venda dos produtos. Essas imagens desempenham um papel importante na apresentação visual das ofertas no site.
 
-O parágrafo tem sua largura limitada a 32 caracteres (max-width: 32ch), mantendo o texto mais conciso e legível. A fonte utilizada é "Merriweather", com estilo serifado, itálico e peso de 900, para dar destaque ao depoimento. Um espaçamento inferior de 32px é adicionado para separar o parágrafo de outros elementos. A posição relativa é usada para inserir aspas decorativas.
+---
+*21 de setembro de 2024*
+## Estilos para a Página de Termos e Condições
 
-.depoimento p::before, .depoimento p::after
+Foram adicionados estilos específicos para a página de **Termos e Condições**, com foco em espaçamentos, formatação de títulos e parágrafos. Esses estilos ajustam as margens e definem uma largura máxima de linha, melhorando a **legibilidade**.
 
-Esses elementos inserem aspas estilizadas antes e depois do parágrafo. As aspas são grandes (font-size: 5rem) e usam a cor secundária definida (var(--cor-p2)). A propriedade position: absolute permite que as aspas sejam posicionadas de maneira independente do fluxo natural do texto.
+---
 
-.depoimento p::before
+## Organização dos Arquivos de Estilos
 
-Adiciona a aspas de abertura (“) antes do início do parágrafo, posicionando-a um pouco à esquerda e acima do texto (left: -50px; top: -20px).
+As importações dos arquivos **CSS** foram adicionadas ao arquivo `style.css` para organizar melhor os estilos do projeto. As categorias incluem **global**, **utilidades**, **home**, **bicicletas** e **seguros**, o que facilita a manutenção e a organização dos estilos.
 
-.depoimento p::after
+---
 
-Adiciona a aspas de fechamento (”) no final do parágrafo.
+## Ícone de Carbono
 
-@media (max-width: 800px)
+Adicionado um ícone **SVG** representando o carbono, com dimensões de **32x32 pixels** e preenchimento em **gradiente linear** (de amarelo `#FFBF00` para laranja `#F2A50C`). O ícone é composto por múltiplos `<path>`, utilizando o elemento `<linearGradient>` para definir o gradiente. O ícone inclui três camadas sobrepostas, simbolizando as estruturas do carbono.
 
-Ajustes para telas com largura de até 800px.
-O layout é reorganizado para uma única coluna (grid-template-columns: 1fr),ajudando na visualização em dispositivos menores.
+---
 
-O texto é centralizado (text-align: center). A altura máxima das imagens é limitada a 200px, para não ocupar muito espaço na tela.
+## Ícone de Elétrica
 
-O espaçamento interno da classe .depoimento-conteudo é ajustado para 40px nas laterais e 20px na parte inferior, deixando um layout mais compacto e centralizado (margin: auto).
-Foi feito a estilização da sessão de introdução.
+Adicionado ícone de **elétrica** com dimensões de **32x32 pixels**, preenchido com um gradiente de amarelo-dourado `#FFBF00` para laranja `#F2A50C`. Criado com múltiplos `<path>`, representando energia de forma vibrante e dinâmica.
 
-.introducao-bg
+---
 
-Define o fundo da seção de introdução com a cor var(--cor-12), de acordo com as cores estabelecidas no tema do site. Além disso, cria uma sombra interna (box-shadow: inset 0 -120px var(--cor-0)) que gera um efeito de profundidade no fundo, especialmente na parte inferior da seção.
+## Ícone de E-mail
 
-.introducao
+Ícone representando um envelope, com dimensões de **20x20 pixels** e preenchimento em gradiente de amarelo-dourado `#FFBF00` para laranja `#F2A50C`. Usado para representar comunicação eletrônica, o ícone utiliza um `<path>` único.
 
-Usa o layout de grid com duas colunas iguais (grid-template-columns: 1fr 1fr), permitindo que o conteúdo e a imagem fiquem lado a lado. O espaçamento entre as colunas é de 40px, garantindo que os elementos não fiquem muito colados.
+---
 
-.introducao-conteudo
+## Ícone de Entrega
 
-Essa classe faz com que o conteúdo textual fique alinhado no final da coluna com align-self: end, criando um visual mais equilibrado, com o texto próximo do rodapé da seção. Também adiciona um espaçamento inferior (padding) de 200px para garantir que o conteúdo tenha um respiro adequado.
+Adicionado um ícone SVG de um **veículo de entrega**, com dimensões de **16x16 pixels** e preenchido em cinza `#9C9C9C`. O ícone é composto por dois `<path>`, um representando o corpo do veículo e outro as rodas.
 
-.introducao img
+---
 
-As imagens são configuradas para ocupar 100% da largura e altura do contêiner, garantindo que se ajustem perfeitamente ao espaço disponível. O object-fit: cover faz com que a imagem seja cortada proporcionalmente para evitar distorção. Os cantos das imagens são levemente arredondados com border-radius: 4px, suavizando o visual.
+## Ícone de Estoque
 
-.introducao h1
+Ícone de **estoque** com dimensões de **16x16 pixels** e preenchimento cinza `#9C9C9C`. O caminho principal (`<path>`) descreve um contêiner com múltiplas caixas organizadas.
 
-A margem inferior do título é definida em 32px, para que haja uma boa separação entre o título e os elementos seguintes, o que melhora a hierarquia visual.
+---
 
-.introducao p
+## Ícone de Horário
 
-Os parágrafos também têm uma margem inferior de 20px, criando espaço suficiente entre os blocos de texto, o que facilita a leitura e evita que o conteúdo fique amontoado.
+Adicionado ícone de **relógio analógico** com dimensões de **20x20 pixels** e preenchido com um gradiente de amarelo-dourado `#FFBF00` para laranja `#F2A50C`, representando o conceito de tempo e agendamento.
 
-@media (max-width: 800px)
+---
 
-Quando a tela é menor que 800px (como em smartphones), algumas alterações são feitas para garantir que o design continue funcional e agradável:
+## Ícone de Lista de Verificação
 
-A cor de fundo muda para var(--cor-11), que é mais adequada para telas pequenas, e também é adicionado um padding-top de 40px para ajustar o espaço no topo da seção.
+Ícone representando um **checklist**, com dimensões de **13x9 pixels** e preenchido em amarelo-dourado `#FB0`, ideal para sinalizar tarefas concluídas.
 
-A sombra no fundo fica menos intensa, com um box-shadow reduzido (inset 0 -60px #ffffff), para ajustar o efeito ao novo layout.
+---
 
-O grid passa a ter apenas uma coluna (grid-template-columns: 1fr), com o conteúdo e a imagem ficando um embaixo do outro, o que é mais adequado para dispositivos móveis.
+## Ícone de Localização
 
-O espaçamento entre os elementos na grid aumenta para 32px para garantir que o conteúdo não fique muito apertado.
+Adicionado ícone SVG de **localização** com dimensões de **20x20 pixels** e preenchimento com um gradiente de amarelo-dourado `#FFBF00` para laranja `#F2A50C`, representando mapas ou geolocalização.
 
-O padding inferior do .introducao-conteudo é removido para ajustar o alinhamento do texto nas telas pequenas.
+---
 
-A margem inferior do título (h1) é diminuída para 16px, fazendo com que o título fique mais compacto.
+## Ícone de Rastreador
 
-A altura da imagem é limitada a 300px, evitando que ela ocupe muito espaço em telas menores, enquanto sua largura continua ocupando todo o espaço disponível.
+Ícone de **rastreamento**, com dimensões de **32x32 pixels** e preenchido em gradiente de amarelo-dourado `#FFBF00` para laranja `#F2A50C`, simbolizando monitoramento.
 
-Foi adicionada a estilização para os parceiros
-- Define o padding superior e inferior da seção ".parceiros" para garantir um bom espaçamento em diferentes tamanhos de tela.
-- Ajusta o padding inferior para dispositivos com largura máxima de 800px, tornando o layout mais compacto em telas menores.
-- Configura a lista de parceiros (.parceiros ul) com um layout de grid de 4 colunas para telas maiores e 2 colunas para telas menores, assegurando uma distribuição equilibrada dos itens.
-- Aplica estilos de bordas verticais e horizontais nos itens da lista, removendo a borda à esquerda no primeiro e no quinto item e adicionando bordas superiores a partir do quinto item em telas grandes e do terceiro item em telas menores.
-- Implementa ajustes de responsividade, modificando margens, espaçamento e layout dos itens para telas menores (máximo de 800px), incluindo a remoção das bordas à esquerda em itens ímpares.
+---
 
-Foi feito a estilização para sessão de tecnologia
-- Define a cor de fundo e uma sombra interna para a .tecnologia-bg, criando um efeito visual interessante com as sombras internas.
-- Ajusta a seção .tecnologia para ter um layout de grid com duas colunas e um espaçamento de 40px entre os itens.
-- Faz com que a imagem dentro de .tecnologia-imagem preencha completamente o contêiner, usando object-fit: cover e object-position: left para um ajuste perfeito.
-- Configura padding superior e inferior para a .tecnologia-conteúdo, garantindo que o espaçamento ao redor do conteúdo esteja bem equilibrado.
-- Adiciona margens para vários elementos dentro de .tecnologia-conteúdo, como span, h2, p e links, para garantir um espaçamento consistente e visualmente agradável.
-- Estiliza a .tecnologia-vantagens com um layout flexível, ajustando o espaçamento entre os itens e a largura das imagens para melhor apresentação.
-- Faz ajustes de responsividade para telas menores: remove a sombra interna em telas com largura máxima de 800px, muda o layout de grid para uma coluna e oculta a imagem da tecnologia.
-- Adiciona estilos específicos para dispositivos com largura máxima de 600px, modificando a direção dos itens em .tecnologia-vantagens para coluna.
+## Ícone de Seguro
 
-13 de setembro de 2024
+Ícone de **seguro** com dimensões de **32x32 pixels**, preenchido com gradiente de amarelo-dourado `#FFBF00` para laranja `#F2A50C`, representando proteção e segurança.
 
-Termos de Uso
+---
 
-Este é um arquivo de uma página a parte do site que contém os termos de uso da empresa Bikcraft.
-Adição de estilo global
+## Ícone de Seta
 
-Neste arquivo foi colocado estilos específicos para algumas tags.
+Ícone de **seta** com dimensões de **18x10 pixels** e preenchido em preto `#320`, projetado para navegação.
 
-Adição de estilo do cabeçalho
+---
 
-Neste arquivo estilizamos o header e fizemos a responsividade.
+## Ícone de Seta para Abrir
 
-Adição de estilo do rodapé
+Ícone de **seta para abrir**, com dimensões de **14x6 pixels** e preenchido em cinza `#B2B2B2`, usado para indicar ação de expandir conteúdo.
 
-Neste arquivo estilizamos o footer e fizemos a responsividade.
+---
 
-Adição de estilo na seção de seguros
+## Ícone de Símbolo Sustentável
 
-Neste arquivo estilizamos a seção seguros e fizemos a responsividade.
+Ícone representando um **símbolo de sustentabilidade**, com dimensões de **32x32 pixels** e preenchido com um gradiente de amarelo `#FFBF00` para dourado `#F2A50C`.
 
-Adição de estilo do componente
+---
 
-Neste arquivo foram criados estilos através das classes do index para facilitar o trabalho na hora de estilizar os elementos, como também foi realizado a responsividade.
+## Ícone de Telefone
 
-Adição de estilo das cores
+Ícone de **telefone**, com dimensões de **20x20 pixels** e preenchido em gradiente de amarelo `#FFBF00` para dourado `#F2A50C`, simbolizando comunicação.
 
-Neste arquivo temos a estilização de todas as cores utilizadas no site através de pseudo seletores e classes.
+---
 
-Adição de estilo nas tipografias
+## Ícone de Velocidade
 
-Neste arquivo estilizamos todas as fontes que foram utilizadas no site, definindo então seu tamanho, peso e tipo de fonte, como também realizamos a responsividade.
+Ícone de **velocidade**, com dimensões de **32x32 pixels** e preenchido com gradiente de amarelo `#FFBF00` para dourado `#F2A50C`. Ideal para sinalizar rapidez e eficiência.
 
-17 de setembro de 2024
+---
 
-Adiciona ícone SVG
+## Ícones de Logomarcas
 
-bikcraft: Incluímos um ícone SVG personalizado com dimensões de 136 x 32 pixels. O ícone representa uma forma com contornos distintos e é preenchido com a cor branca (#fff).
+Vários ícones de logomarcas foram adicionados, representando parcerias comerciais, como:
 
-Utilizamos um único elemento `<path>` para definir o design do ícone, com coordenadas e comandos específicos para criar a forma desejada, e será utilizado  para aprimorar a interface do usuário.
+- **Caravan** (140x38 px, preenchido com cinza `#9C9C9C`)
+- **Ranek** (149x36 px, preenchido com cinza `#9C9C9C`)
+- **Dogs** (152x39 px, preenchido com cinza `#9C9C9C`)
+- **Flexblog** (165x38 px, preenchido com cinza `#9C9C9C`)
+- **Handel** (139x50 px, preenchido com cinza `#9C9C9C`)
+- **Lescone** (208x41 px, preenchido com cinza `#9C9C9C`)
+- **Wildbeast** (196x34 px, preenchido com cinza `#9C9C9C`)
+- **Surfbot** (200x49 px, preenchido com cinza `#9C9C9C`)
 
-Adicional imagem de bicicleta
+---
 
-Incluímos imagens representando bicicletas, que serão utilizadas como base para a criação das imagens do anúncio das vendas dos produtos.
+## Ícones de Redes Sociais
 
-21 de setembro de 2024
+Foram adicionados ícones para diversas redes sociais:
 
-Foi adicionado e editado estilos na página de Termos e Condições
+- **Facebook** (32x32 px, preenchido em branco ou com gradiente)
+- **Instagram** (32x32 px, preenchido em branco ou com gradiente)
+- **YouTube** (32x32 px, preenchido em branco ou com gradiente)
 
-Estilos específicos para a página de Termos e Condições, incluindo espaçamentos e formatação de títulos e parágrafos. O arquivo ajusta margens e define uma largura máxima de linha para melhorar a legibilidade.
+---
 
-Organizando as que são de estilo
+## Imagens de Demonstração dos Produtos
 
-Adicionei as importações dos arquivos CSS no arquivo style.css para organizar os estilos do projeto. Os arquivos são importados em categorias como global, utilidades, home, bicicletas e seguros, facilitando a manutenção e a organização dos estilos.
+Imagens foram adicionadas para mostrar os modelos dos produtos vendidos no site, destacando suas características e detalhes visuais.
 
-ícone de carbono
+---
 
+## Localização das Lojas
 
-Adicionado ícone de carbono em formato SVG com preenchimento de gradiente linear que varia de amarelo (#FFBF00) para laranja (#F2A50C)  com dimensões de 32x32 pixels. As formas são desenhadas com o uso de múltiplos caminhos (`<path>`) definidos por coordenadas específicas. O gradiente é gerado usando o elemento `<linearGradient>` com os atributos `x1`, `y1`, `x2` e `y2`. O ícone inclui três camadas sobrepostas, com diferentes níveis de detalhes em seus caminhos e tamanhos, representando as diferentes estruturas do carbono. Possui definição do namespace `xmlns` para garantir compatibilidade e interpretação correta do SVG nos navegadores.
+Imagens de **localização** foram incluídas para demonstrar onde estão as lojas físicas da empresa, facilitando a visualização para os usuários.
 
-ícone de elétrica
+---
 
-O arquivo contém um ícone vetorial com dimensões de 32x32 pixels e preenchido com uma gradiente de cores amarelo-dourado (#FFBF00) e laranja (#F2A50C) representando um conceito de elétrica, aplicado via `<linearGradient>`, para representar a energia fluindo de uma forma vibrante e dinâmica. Criado com múltiplos caminhos (`<path>`), cada um com coordenadas cuidadosamente posicionadas para formar as partes da ilustração.
+## Imagens para Página Inicial
 
-ícone de e-mail
+Imagens usadas para ilustrar as mensagens de introdução, depoimentos e serviços como **seguros** e **tecnologia**.
 
-O arquivo contém um ícone dimensões de 20x20 pixels e preenchido com uma gradiente de cores amarelo-dourado (#FFBF00) e laranja (#F2A50C). Adicionado ao projeto para uso relacionado a e-mails ou comunicação eletrônica. O ícone usa um `<path>` único para delinear o formato de um envelope. A estrutura visual inclui o desenho da borda superior do envelope e o detalhe central, representando a aba aberta e a entrega de mensagens.
+---
+*23 de setembro de 2024*
+## SVG Canto Inferior Esquerdo
 
-ícone de entrega
+Implementado um gráfico **SVG** com uma matriz de **16 círculos** organizados em uma grade **4x4**, utilizando um canvas de **52x52 pixels**. Cada linha contém um círculo posicionado de forma alternada nos eixos **x** e **y**. A estrutura é otimizada com o uso de um único caminho (`<path>`), garantindo uniformidade visual e melhor desempenho. A disposição dos círculos parte do **canto inferior esquerdo**.
 
-Adicionado ícone SVG que representa um veículo de entrega, simbolizando transporte e logística. O ícone possui um `<path>` principal que descreve o veículo com linhas simples.O arquivo contém um ícone com dimensões de 16x16 pixels e preenchido com uma cor cinza (#9C9C9C).
+---
 
-O ícone utiliza duas partes principais:
+## SVG Canto Inferior Direito
 
-  1. A primeira define o corpo do veículo de entrega com detalhes geométricos simples, como a área da cabine, caixa de carga e chassi.
-  2. A segunda desenha as rodas traseiras e dianteiras do veículo, com preenchimento de cor sólida #9C9C9C.
+Foi incorporado um ícone **SVG** com dimensões de **52x52 pixels**, preenchido com uma cor **cinza translúcida**. O ícone implementa uma matriz de **20 círculos**, organizados em uma grade, partindo do **canto inferior direito** da tela. O design foi otimizado utilizando um único caminho (`<path>`), visando eficiência e consistência visual.
 
-ícone de estoque
+---
 
-ícone possui dimensões compactas (16x16 pixels), adequadas para interfaces minimalistas ou dashboards que gerenciam inventários e sistemas de estoque, e preenchido com uma cor cinza (#9C9C9C).O caminho principal (`<path>`) cria uma visualização de um contêiner de armazenamento com múltiplas caixas organizadas, simbolizando itens armazenados ou logística interna.
+## SVG Canto Inferior Direito-P
 
-ícone de horário
+Adicionado um ícone **SVG** com dimensões de **52x52 pixels** e preenchido com uma cor **amarelo-dourada** (`#E4A30B`). O design segue o padrão de **círculos equidistantes** organizados nos eixos **x** e **y**, com um único caminho (`<path>`) que otimiza a estrutura do SVG e garante uma renderização eficiente. O ícone é ancorado no **canto inferior direito** da tela.
 
-O ícone com dimensões de 20x20 pixels e preenchido com uma gradiente de cores amarelo-dourado (#FFBF00) e laranja (#F2A50C),  que representa o conceito de "horário" com um design de relógio analógico, ideal para sinalizar tempo, agendamento ou cronograma.
+---
 
-ícone de lista de verificação
+## SVG Canto Superior Esquerdo-P
 
-O ícone com dimensões de 13x9 pixels e preenchido com uma cor amarelo-dourado (#FB0). Representando uma marcação de checklist, para sinalizar tarefas concluídas, listas verificadas ou itens confirmados na interface de usuário.
+O ícone **SVG** possui dimensões de **52x52 pixels** e é preenchido com uma cor **amarelo-dourada** (`#E4A30B`). O design inclui **20 círculos** organizados em linhas que começam no **canto superior esquerdo** e preenchem a área de forma progressiva. A estrutura foi otimizada com um único caminho (`<path>`), garantindo consistência visual e eficiência no código.
 
-ícone de localização
+---
 
-O  ícone SVG com dimensões de 20x20 pixels e preenchido com uma gradiente de cores amarelo-dourado (#FFBF00) e laranja (#F2A50C). Representando a localização, mapas ou geolocalização.
-ícone de rastreador
+## SVG Canto Superior Direito
 
-O íconel com dimensões de 32x32 pixels e preenchido com uma gradiente de cores amarelo-dourado (#FFBF00) e laranja (#F2A50C). simbolizando localização, monitoramento e rastreamento.
-ícone de seguro
-
-O  ícone com dimensões de 32x32 pixels e preenchido com uma gradiente de cores amarelo-dourado (#FFBF00) e laranja (#F2A50C). Representando proteção, segurança, proteção ou confiabilidade.
-
-ícone de seta
-
-O  ícone SVG com dimensões de18x10 pixels e preenchido com uma gradiente de cor preta (#320).  Projetado para facilitar a navegação e indicar ações em interfaces de usuário. O SVG é escalável, garantindo qualidade em diferentes tamanhos e resoluções.
-
-A estrutura de paths permite fácil modificação e personalização, caso necessário.
-
-ícone de seta para abrir
-
-O ícone SVG representando uma seta apontando para a direita, indicando ação de "abrir", projetada para indicar uma ação de "abrir" ou expandir conteúdo. Com dimensões de 14x6 pixels sendo preenchido na cor cinza  (#B2B2B2), é composto por um único path com regras de preenchimento e recorte, otimizando a renderização e a manipulação do ícone.
-ícone de símbolo sustentável
-
-O ícone SVG representa um símbolo de sustentabilidade. Com dimensões de 32x32 pixels, o ícone é preenchido com um gradiente que varia do amarelo (#FFBF00) ao dourado (#F2A50C), conferindo uma aparência vibrante. É composto por um único path, o que otimiza a renderização e a manipulação do ícone.
-
-Ícone de telefone
-
-O ícone SVG representa um telefone, simbolizando comunicação e conectividade. Com dimensões de 20x20 pixels, o ícone é preenchido com um gradiente que transita do amarelo (#FFBF00) ao dourado (#F2A50C). Ele é composto por um único path, otimizando sua renderização e manipulação.
-
-Ícone de velocidade
-
-O ícone SVG representa um símbolo de velocidade, ideal para indicar rapidez e eficiência. Com dimensões de 32x32 pixels, o ícone apresenta dois paths preenchidos com gradientes que variam do amarelo (#FFBF00) ao dourado (#F2A50C). O primeiro path simboliza movimento e desempenho, enquanto o segundo path, em forma de seta, reforça a ideia de ação e velocidade. Para aplicações relacionadas a transporte, desempenho de produtos ou qualquer interface que valorize agilidade.
-
-Ícone da logomarca “caravana”
-
-O ícone SVG representa "caravan", parceiro comercial e colaboração. Com dimensões de 140x38 pixels, é preenchido em um tom de cinza (#9C9C9C). A estrutura é composta por um único path que, através de formas e contornos bem definidos, transmite uma sensação de movimento e interconexão, para representar parcerias e redes de negócios.
-
-Ícone da logomarca "ranek"
-
-Ícone SVG representando a logo da marca "ranek". Com dimensões de 149x36 pixels, este ícone é preenchido na cor cinza (#9C9C9C) e consiste em um único path que captura a identidade visual da marca. Este design otimizado é ideal para aplicações que requerem a representação da marca em contextos digitais
-
-Ícone da logomarca "dogs"
-
-Ícone SVG representando a logomarca "dogs". Com dimensões de 152x39 pixels, este ícone é preenchido na cor cinza (#9C9C9C). O design é composto por múltiplos paths que capturam a essência da marca, refletindo um estilo moderno e amigável. Este icone esta representando a empresa colaboradora de forma clara e visualmente atrativa.
-
-Ícone da logomarca "flexblog"
-
-Ícone SVG representando a logomarca "flexblog". Com dimensões de 165x38 pixels, este ícone é preenchido na cor cinza (#9C9C9C). O design incorpora múltiplos paths que transmitem uma sensação moderna e dinâmica, alinhando-se à identidade visual da marca.
-
-Ícone da logomarca "handel"
-
-Ícone SVG representando a logomarca "handel". Com dimensões de 139x50 pixels, o design é preenchido na cor cinza (#9C9C9C) e apresenta uma tipografia estilizada que reflete a identidade da marca.
-
-Ícone da logomarca "lescone"
-
-Ícone SVG da logomarca "lescone" com dimensões de 208x41 pixels. O design utiliza um preenchimento cinza (#9C9C9C).
-
-Ícone da logomarca "wildbeast"
-
-Ícone SVG da logomarca "wildbeast" com dimensões de 196x34 pixels. O design apresenta um preenchimento cinza (#9C9C9C).
-
-Ícone da logomarca "surfbot"
-
-Ícone SVG da logomarca "surfbot" com dimensões de 200x49 pixels. O design utiliza um preenchimento cinza (#9C9C9C).
-
-ícone da rede social Facebook
-
-Ícone da rede social Facebook com dimensões de 32x32 pixels. O design utiliza um preenchimento branco e reflete o estilo característico da marca.
-
-ícone da rede social Facebook com gradiente
-
-Ícone SVG da rede social Facebook com dimensões de 32x32 pixels. O design utiliza um gradiente que vai do amarelo (#FFBF00) ao laranja (#F2A50C).
-
-ícone SVG da rede social Instagram
-
-Ícone SVG da rede social Instagram com dimensões de 32x32 pixels. O design utiliza uma paleta de cores vibrantes e modernas, predominando o branco (#FFFFFF) para o fundo. Este ícone representa a presença da empresa na plataforma Instagram.
-
-ícone da rede social Instagram com gradiente
-
-Ícone SVG da rede social Instagram com dimensões de 32x32 pixels. O design utiliza um gradiente que vai do amarelo (#FFBF00) ao laranja (#F2A50C), representando a presença da empresa nas redes sociais.
-
-ícone da rede social YouTube
-
-Ícone SVG da rede social YouTube com dimensões de 32x32 pixels. O design apresenta um retângulo em branco com um triângulo representando o botão "play", ideal para destacar a presença da empresa no YouTube.
-
-ícone da rede social YouTube com gradiente
-
-Ícone SVG da rede social YouTube com dimensões de 32x32 pixels. O design utiliza um gradiente que vai do amarelo (#FFBF00) ao laranja (#F2A50C). Este ícone representando a presença da empresa no YouTube.
-
-imagens de demonstração dos produtos
-
-Imagens dos modelos dos produtos, utilizadas para mostrar aos usuários os produtos a serem vendidos.
-
-localização das lojas
-
-Imagens utilizadas pra demonstrar a localização e endereço das lojas, para possibilitar que os usuário saibam e vejam onde estão localizadas as lojas da empresa.
-
-imagens para pagina inicial
-
-Imagens utilizadas para ilustrar as mensagens de introdução e depoimento, e serviços como serviços de seguro e tecnologia.
-
-23 de setembro de 2024
-
-SVG canto inferior esquerdo
-
-Implementa um gráfico SVG com uma matriz de 16 círculos distribuídos em uma grade 4x4, o layout utiliza um canvas de 52x52 pixels. Cada linha contém um círculo posicionado de forma alternada entre os eixos x e y. A estrutura é definida com um atributo path para otimizar o código e manter a uniformidade dos elementos visuais A estrutura utiliza um caminho (path) para otimizar o código e garantir consistência visual, a disposição parte do canto inferior esquerdo.
-SVG canto inferior direito
-
-Incorporamos um ícone SVG ao nosso repositório. O ícone foi projetado com dimensões de 52x52 pixels e preenchido com uma cor cinza translúcida que implementa uma matriz de 20 círculos organizados em uma grade, partindo da parte inferior direita. A estrutura foi otimizada com o uso de um caminho (path) único, sendo ancorado no canto inferior direito da tela.
-SVG canto inferior direito-p
-
-Incorporamos o ícone SVG com dimensões de 52x52 pixels e preenchido com uma cor amarelo-dourada (#E4A30B). O uso de um único caminho (path) otimiza a estrutura do SVG, garantindo uma renderização eficiente e consistente. O padrão dos círculos segue uma disposição equidistante ao longo dos eixos x e y, sendo ancorado no canto inferior direito da tela.
-SVG canto superior esquerdo-p
-
-O ícone é um SVG com dimensões de 52x52 pixels e preenchido com uma cor amarelo-dourada (#E4A30B). A composição inclui 20 círculos. O uso de um caminho único (path) otimiza a estrutura do SVG, com os círculos organizados em linhas que começam do canto superior esquerdo e preenchem a área de forma progressiva.
-
-SVG canto superior direito
-
-O ícone é um SVG com dimensões de 52x52 pixels e preenchido com uma cor cinza translúcida. Define uma grade de círculos distribuídos a partir do canto superior direito com os círculos se estendendo verticalmente e horizontalmente ao longo do canvas. O uso de um caminho único (path) otimiza o código para garantir eficiência e consistência na renderização.
+Ícone **SVG** com dimensões de **52x52 pixels** e preenchido com uma cor **cinza translúcida**. Os círculos estão distribuídos em uma grade que se estende a partir do **canto superior direito** do canvas. O uso de um único caminho (`<path>`) otimiza o código, garantindo uma renderização eficiente e uniforme.
