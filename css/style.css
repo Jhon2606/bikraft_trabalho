@@ -1,21 +1,23 @@
-@import "./global/global.css";
-@import "./utilidades/tipografia.css";
-@import "./utilidades/cores.css";
+/* Importa estilos globais */
+@import "./global/global.css";  /* Estilos gerais usados em todo o site */
+@import "./utilidades/tipografia.css";  /* Estilos relacionados à tipografia */
+@import "./utilidades/cores.css";  /* Define a paleta de cores do site */
 
-@import "./global/header.css";
-@import "./global/footer.css";
+/* Importa o cabeçalho e rodapé */
+@import "./global/header.css";  /* Estilos do cabeçalho */
+@import "./global/footer.css";  /* Estilos do rodapé */
 
 /* Utilidades */
-@import "./utilidades/componentes.css";
+@import "./utilidades/componentes.css";  /* Estilos utilitários para componentes reutilizáveis */
 
-/* Home */
-@import "./home/introducao.css";
-@import "./home/tecnologia.css";
-@import "./home/parceiros.css";
-@import "./home/depoimento.css";
+/* Estilos da página inicial (Home) */
+@import "./home/introducao.css";  /* Estilos da seção de introdução */
+@import "./home/tecnologia.css";  /* Estilos da seção de tecnologia */
+@import "./home/parceiros.css";  /* Estilos da seção de parceiros */
+@import "./home/depoimento.css";  /* Estilos da seção de depoimentos */
 
-/* Bicicletas */
-@import "./bicicletas/bicicletas-lista.css";
+/* Estilos da página de Bicicletas */
+@import "./bicicletas/bicicletas-lista.css";  /* Estilos para a lista de bicicletas */
 
-/* Seguros */
-@import "./seguros/seguros.css";
+/* Estilos da página de Seguros */
+@import "./seguros/seguros.css";  /* Estilos da seção de seguros */
