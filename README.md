@@ -486,3 +486,99 @@ O ícone **SVG** possui dimensões de **52x52 pixels** e é preenchido com uma c
 ## SVG Canto Superior Direito
 
 Ícone **SVG** com dimensões de **52x52 pixels** e preenchido com uma cor **cinza translúcida**. Os círculos estão distribuídos em uma grade que se estende a partir do **canto superior direito** do canvas. O uso de um único caminho (`<path>`) otimiza o código, garantindo uma renderização eficiente e uniforme.
+
+---
+*24 de setembro de 2024*
+## Comentei o arquivo index.html para mais fácil compreensão do código
+
+Todo o arquivo foi comentado
+
+## Comentei o arquivo de estilo dos termos
+
+Adicionei uma explicação por escrito do que cada parte do código faz
+
+## Nomeei cada tipo de importação referente a estilos do site
+
+Ficou muito mais fácil de identificar a importação de cada arquivo do projeto
+
+---
+*25 de setembro de 2024*
+## Update footer.css
+
+Alterei a cor do footer para a cor 10
+
+## Update footer.css
+
+Voltei para a cor original (cor 12).
+
+## Update global.css
+
+Mudei a cor do texto do body para azul
+
+## Update global.css
+
+Voltei para a cor original (preto).
+
+## Update header.css
+
+Voltei para a cor original (preto), fica mais bonito e menos chamativo.
+
+## Update seguros.css
+
+Alterei a cor do background da seção seguros para cinza (cor-7).
+
+## Update seguros.css
+
+Alterei a cor de fundo do item da seção seguros para um cinza mais escuro(cor-10)
+
+## Update seguros.css
+
+Alterei para a cor original (cor-11).
+
+## Update seguros.css
+
+Alterei a cor de fundo do item da seção seguros para a cor -12
+
+## Update componentes.css
+
+Modifiquei o padding-right para 30px.
+
+## Update componentes.css
+
+Alterei o tamanho do padding-right da classe container para 20px novamente.
+
+## Update cores.css
+
+Adicionei uma nova cor a cartela de cores utilizadas que seria a p6
+
+## Update tipografia.css
+
+Modifiquei o peso (da fonte) da classe .font-1-xs para  700
+
+## Update tipografia.css
+
+Alterei o peso (da fonte) da classe .font-1-xs  para 400 novamente
+
+## código bicicletas-listas comentado
+
+Códigos do arquivo bicicletas-listas.css foi comentado.
+
+## Comentei o arquivo bicicletas-lista.css
+
+Comentei o arquivo para entendimento das funções no código.
+
+## Comentei o arquivo depoimento.css
+
+Comentei o arquivo para entendimento das funções no código.
+
+## Comentei o arquivo introducao.css 
+
+Comentei o arquivo para entendimento das funções no código.
+
+## Comentei o arquivo parceiros.css
+
+Comentei o arquivo para entendimento das funções no código.
+
+## Comentei o arquivo tecnologia.css
+
+Comentei o arquivo para entendimento das funções no código.
