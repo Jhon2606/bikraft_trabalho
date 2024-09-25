@@ -1,12 +1,16 @@
 .tecnologia-bg {
   background-color: var(--cor-11);
   box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0);
+  /* Define a cor de fundo da seção de tecnologia com a variável personalizada (--cor-11).
+     Aplica duas sombras internas (inset): uma no topo com 80px de deslocamento (0 80px),
+     e outra na parte inferior com -80px, ambas usando a cor da variável (--cor-0). */
 }
 
 .tecnologia {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  /* Define um layout em grid com duas colunas iguais (1fr 1fr) e um espaçamento de 40px entre as colunas. */
 }
 
 .tecnologia-imagem img {
@@ -14,67 +18,84 @@
   height: 100%;
   object-fit: cover;
   object-position: left;
+  /* As imagens ocupam 100% da largura e altura do container.
+     O object-fit: cover garante que a imagem preencha o container sem distorcer.
+     O object-position: left posiciona a imagem à esquerda dentro do container. */
 }
 
 .tecnologia-conteudo {
   padding-top: 160px;
   padding-bottom: 160px;
+  /* Adiciona um espaçamento interno superior e inferior (padding) de 160px ao conteúdo da seção. */
 }
 
 .tecnologia-conteudo > span {
   display: block;
   margin-bottom: 20px;
+  /* O elemento <span> dentro do conteúdo é exibido como bloco (block) e tem um espaçamento inferior de 20px. */
 }
 
 .tecnologia-conteudo h2 {
   margin-bottom: 32px;
+  /* O título <h2> tem um espaçamento inferior de 32px. */
 }
 
 .tecnologia-conteudo > p {
   margin-bottom: 20px;
+  /* Os parágrafos dentro do conteúdo têm um espaçamento inferior de 20px. */
 }
 
 .tecnologia a {
   margin-bottom: 80px;
+  /* Os links (elementos <a>) dentro do conteúdo têm um espaçamento inferior de 80px. */
 }
 
 .tecnologia-vantagens {
   display: flex;
   gap: 40px;
+  /* As vantagens são dispostas como um flexbox com um espaçamento de 40px entre os itens. */
 }
 
 .tecnologia-vantagens h3 {
   margin-bottom: 8px;
   width: max-content;
+  /* O título <h3> tem um espaçamento inferior de 8px e ajusta a largura ao conteúdo máximo (max-content). */
 }
 
 .tecnologia-vantagens img {
   width: 24px;
   margin-bottom: 8px;
+  /* As imagens dentro das vantagens têm largura de 24px e um espaçamento inferior de 8px. */
 }
 
 @media (max-width: 800px) {
   .tecnologia-bg {
     box-shadow: initial;
+    /* Em telas com largura máxima de 800px, a sombra interna (box-shadow) é removida (inicializada). */
   }
   .tecnologia {
     grid-template-columns: 1fr;
+    /* O layout da grid muda para uma única coluna (1fr) em telas menores. */
   }
   .tecnologia-conteudo {
     padding-top: 60px;
     padding-bottom: 60px;
+    /* O espaçamento interno superior e inferior do conteúdo é reduzido para 60px em telas menores. */
   }
   .tecnologia-imagem {
     display: none;
+    /* As imagens são ocultadas em dispositivos menores. */
   }
   .tecnologia a {
     margin-bottom: 60px;
+    /* O espaçamento inferior dos links é reduzido para 60px. */
   }
 }
 
 @media (max-width: 600px) {
   .tecnologia-vantagens {
     flex-direction: column;
+    /* Em dispositivos com largura máxima de 600px, os itens dentro de "tecnologia-vantagens"
+       são organizados verticalmente (em coluna) no flexbox. */
   }
 }
-
