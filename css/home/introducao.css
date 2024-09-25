@@ -1,17 +1,24 @@
 .introducao-bg {
   background: var(--cor-12);
   box-shadow: inset 0 -120px var(--cor-0);
+  /* Define o fundo da seção de introdução com uma cor definida pela variável (--cor-12).
+     Aplica uma sombra interna (inset) com um deslocamento negativo de 120px no eixo Y,
+     utilizando a cor definida pela variável (--cor-0), criando um efeito de sombra na parte inferior. */
 }
 
 .introducao {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0px 40px;
+  /* Utiliza grid layout com duas colunas iguais (1fr 1fr) e define um espaçamento horizontal (gap) de 40px entre elas.
+     O espaçamento vertical é 0px. */
 }
 
 .introducao-conteudo {
   align-self: end;
   padding-bottom: 200px;
+  /* O conteúdo dentro da introdução é alinhado ao final (inferior) verticalmente no grid.
+     Adiciona um espaçamento inferior (padding-bottom) de 200px. */
 }
 
 .introducao img {
@@ -19,14 +26,19 @@
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
+  /* As imagens ocupam 100% da largura e altura do container,
+     são ajustadas para cobrir o espaço (sem distorcer, mantendo a proporção) com object-fit: cover,
+     e têm bordas levemente arredondadas com 4px de border-radius. */
 }
 
 .introducao h1 {
   margin-bottom: 32px;
+  /* Adiciona um espaçamento inferior de 32px ao título <h1> dentro da introdução. */
 }
 
 .introducao p {
   margin-bottom: 20px;
+  /* Adiciona um espaçamento inferior de 20px aos parágrafos dentro da introdução. */
 }
 
 @media (max-width: 800px) {
@@ -34,19 +46,28 @@
     background: var(--cor-11);
     padding-top: 40px;
     box-shadow: inset 0 -60px #ffffff;
+    /* Em dispositivos com largura máxima de 800px, altera a cor de fundo para a variável (--cor-11),
+       adiciona um espaçamento superior de 40px (padding-top),
+       e a sombra interna na parte inferior é reduzida para um deslocamento de -60px, com a cor branca (#ffffff). */
   }
   .introducao {
     grid-template-columns: 1fr;
     gap: 32px;
+    /* Em dispositivos menores, a grid muda para uma coluna única (1fr),
+       e o espaçamento entre os elementos é aumentado para 32px. */
   }
   .introducao-conteudo {
     padding-bottom: 0px;
+    /* Remove o espaçamento inferior (padding-bottom) em dispositivos menores. */
   }
   .introducao h1 {
     margin-bottom: 16px;
+    /* Reduz o espaçamento inferior do título <h1> para 16px em telas menores. */
   }
   .introducao img {
     height: 300px;
     width: 100%;
+    /* As imagens têm altura fixa de 300px e largura 100% em dispositivos menores,
+       para garantir que elas se ajustem ao layout mobile. */
   }
 }
