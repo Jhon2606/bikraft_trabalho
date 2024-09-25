@@ -1,10 +1,12 @@
 .bicicletas-lista {
   padding-top: 60px;
   padding-bottom: 120px;
+  /* Adiciona espaçamento no topo e na parte inferior da lista de bicicletas */
 }
 
 .bicicletas-lista h2 {
   margin-bottom: 40px;
+  /* Define o espaçamento inferior para o título <h2> dentro da lista de bicicletas */
 }
 
 .bicicletas-lista ul {
@@ -15,25 +17,32 @@
   margin-left: auto;
   margin-right: auto;
   overflow-x: auto;
+  /* Estiliza a lista não ordenada (ul) para exibir itens em linha com espaçamento entre eles.
+     Define um padding para os lados e inferior, largura máxima, e centraliza a lista horizontalmente.
+     Também permite rolagem horizontal se o conteúdo ultrapassar a largura disponível. */
 }
 
 .bicicletas-lista li {
   flex: 1;
   min-width: 280px;
+  /* Define que cada item da lista (li) deve ocupar a mesma proporção de espaço, com uma largura mínima de 280px */
 }
 
 .bicicletas-lista a {
   display: block;
+  /* Faz com que os links dentro da lista ocupem todo o espaço disponível em bloco */
 }
 
 .bicicletas-lista img {
   margin-bottom: 16px;
+  /* Adiciona espaçamento inferior para as imagens dentro da lista de bicicletas */
 }
 
 .bicicletas-lista h3 {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+  /* Define o espaçamento inferior para os títulos <h3> e alinha o conteúdo ao centro verticalmente */
 }
 
 .bicicletas-lista h3::before {
@@ -44,21 +53,26 @@
   margin-right: 8px;
   background-color: var(--cor-p1);
   transition: width 0.2s;
+  /* Insere um elemento decorativo antes do título <h3>, com um pequeno bloco colorido e uma transição suave na largura */
 }
 
 .bicicletas-lista a:hover h3::before {
   width: 24px;
+  /* Quando o link é hover (passa o mouse), aumenta a largura do bloco decorativo antes do título <h3> */
 }
 
 .bicicletas-lista li span {
   padding-left: 20px;
+  /* Adiciona um espaçamento à esquerda de qualquer <span> dentro dos itens da lista */
 }
 
 @media (max-width: 800px) {
   .bicicletas-lista {
     padding-bottom: 60px;
+    /* Para telas menores que 800px, reduz o espaçamento inferior da lista de bicicletas */
   }
   .bicicletas-lista ul {
     gap: 20px;
+    /* Em telas menores, reduz o espaçamento entre os itens da lista */
   }
 }
