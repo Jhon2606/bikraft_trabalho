@@ -1,10 +1,12 @@
 .parceiros {
   padding-top: 60px;
   padding-bottom: 120px;
+  /* Define um espaçamento superior (60px) e inferior (120px) para a seção de parceiros. */
 }
 
 .parceiros h2 {
   margin-bottom: 60px;
+  /* Adiciona um espaçamento inferior de 60px ao título <h2> da seção de parceiros. */
 }
 
 .parceiros ul {
@@ -13,41 +15,54 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
+  /* Adiciona um padding horizontal de 20px, com largura máxima de 1400px.
+     Define o layout em grid com quatro colunas iguais (1fr), e centraliza a lista horizontalmente com margin: 0 auto. */
 }
 
 .parceiros li {
   display: flex;
   padding: 32px;
   border-left: 2px solid var(--cor-2);
+  /* Os itens da lista (li) são exibidos como flexbox,
+     têm um padding interno de 32px e uma borda à esquerda de 2px com cor definida pela variável (--cor-2). */
 }
 
 .parceiros img {
   margin: auto;
+  /* As imagens dentro dos itens da lista são centralizadas dentro do container usando margin: auto. */
 }
 
 .parceiros li:first-child,
 .parceiros li:nth-child(5) {
   border-left: none;
+  /* Remove a borda esquerda do primeiro item e do quinto item da lista. */
 }
 
 .parceiros li:nth-child(n + 5) {
   border-top: 2px solid var(--cor-2);
+  /* A partir do quinto item da lista, é adicionada uma borda superior de 2px com a cor definida pela variável (--cor-2),
+     criando uma separação visual entre as linhas. */
 }
 
 @media (max-width: 800px) {
   .parceiros {
     padding-bottom: 60px;
+    /* Em dispositivos com largura máxima de 800px, o espaçamento inferior é reduzido para 60px. */
   }
   .parceiros h2 {
     margin-bottom: 20px;
+    /* O espaçamento inferior do título <h2> é reduzido para 20px em telas menores. */
   }
   .parceiros ul {
     grid-template-columns: repeat(2, 1fr);
+    /* O layout da grid muda para duas colunas iguais (1fr) em telas menores. */
   }
   .parceiros li:nth-child(n + 3) {
     border-top: 2px solid var(--cor-2);
+    /* Em telas menores, a borda superior passa a ser aplicada a partir do terceiro item da lista. */
   }
   .parceiros li:nth-child(odd) {
     border-left: none;
+    /* Em dispositivos menores, a borda esquerda é removida dos itens com índices ímpares (odd). */
   }
 }
