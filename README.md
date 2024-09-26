@@ -489,20 +489,6 @@ O ícone **SVG** possui dimensões de **52x52 pixels** e é preenchido com uma c
 
 ---
 *24 de setembro de 2024*
-## Comentei o arquivo index.html para mais fácil compreensão do código
-
-Todo o arquivo foi comentado
-
-## Comentei o arquivo de estilo dos termos
-
-Adicionei uma explicação por escrito do que cada parte do código faz
-
-## Nomeei cada tipo de importação referente a estilos do site
-
-Ficou muito mais fácil de identificar a importação de cada arquivo do projeto
-
----
-*24 de setembro de 2024*
 ## Comentei o arquivo de estilo dos termos
 
 Adicionei uma explicação por escrito do que cada parte do código faz
