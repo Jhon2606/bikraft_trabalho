@@ -1,5 +1,27 @@
 # Bikraft
+
+Bem-vindo ao Bikcraft! Esta é uma plataforma dedicada à venda de bicicletas elétricas personalizadas, focada em unir design, tecnologia e sustentabilidade. Nosso objetivo é oferecer uma experiência interativa e envolvente, onde você pode explorar e personalizar a bicicleta dos seus sonhos.
+
+## Funcionalidades Principais
+
+- **Modelos Personalizados:** Escolha entre diferentes modelos e personalize cores e componentes.
+- **Tecnologia de Ponta:** Nossas bicicletas utilizam as tecnologias mais avançadas, como motores elétricos e rastreadores.
+- **Serviços Adicionais:** Oferecemos seguros específicos para bicicletas e parcerias com empresas do setor.
+- **Design Responsivo:** Navegação otimizada para todos os dispositivos, com performance rápida e eficiente.
+- **Depoimentos de Clientes:** Veja o que nossos clientes dizem sobre a experiência com a Bikcraft.
+
+## Objetivo
+
+Nosso principal objetivo é promover a mobilidade sustentável e proporcionar uma experiência de compra diferenciada, onde o cliente pode criar uma bicicleta elétrica única e personalizada.
+
+## Como Contribuir
+
+Se você deseja contribuir com melhorias para o Bikcraft, sinta-se à vontade para abrir uma issue ou enviar um pull request. Buscamos sempre aprimorar o projeto com base no feedback da comunidade.
+
+🚴‍♀️ **Bikcraft - Mobilidade com Inovação** 🚴‍♂️
+
 ---
+## Estrutura do Site e Registro de Commits
 *03 de setembro de 2024*
 
 ## Estrutura da Página Inicial
