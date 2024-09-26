@@ -43,3 +43,81 @@ Desenvolver um site dinâmico e adaptável, que permita a venda de bicicletas el
 
 ## 5. Conclusão
 O projeto **Bikcraft** pretende ser uma referência para quem busca bicicletas elétricas que combinem **design** e **alta tecnologia**. Cada etapa do desenvolvimento foi cuidadosamente planejada para garantir que o cliente tenha uma experiência agradável e sem complicações. Nosso foco é unir inovação, funcionalidade e acessibilidade, criando um site que atenda às expectativas do mercado e dos nossos clientes.
+
+---
+## Explicação da Estrutura
+**head**
+
+    <meta charset="UTF-8">: Define o conjunto de caracteres como UTF-8.
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">: Ajusta a largura do layout com base na tela do dispositivo.
+    
+    <title>: Define o título da página.
+    
+    <meta name="description" content="...">: Meta descrição para SEO.
+    
+    <link rel="stylesheet" href="./css/style.css">: Link para o arquivo CSS.
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> e <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>: Pré-conexão com Google Fonts.
+    
+    <link href="https://fonts.googleapis.com/css2?family=...&display=swap" rel="stylesheet">: Importa fontes do Google Fonts.
+    
+ **body**
+
+    <header>: Cabeçalho da página com logo e menu de navegação.
+    
+    <main>: Seção principal de introdução com título, descrição e imagem.
+    
+    <article class="bicicletas-lista">: Lista de bicicletas disponíveis com imagens e preços.
+    
+    <article class="tecnologia-bg">: Seção de tecnologia das bicicletas.
+---
+## Dependencias
+
+### 1. **Arquivos CSS**
+- **`<link rel="stylesheet" href="./css/style.css">`**: Este link aponta para um arquivo CSS local chamado `style.css`, que contém as regras de estilo para a página. Ele é essencial para definir a aparência visual do site.
+
+### 2. **Google Fonts**
+- **Pré-conexão com Google Fonts**:
+  ```html
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  ```
+  Essas linhas ajudam a melhorar o tempo de carregamento das fontes, estabelecendo uma conexão antecipada com os servidores do Google.
+
+- **Importação de fontes do Google Fonts**:
+  ```html
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+  ```
+  Este link importa várias famílias de fontes (Merriweather, Poppins e Roboto) do Google Fonts, permitindo que você use essas fontes no seu site.
+
+### 3. **Imagens e Logos**
+- **Logo da empresa**:
+  ```html
+  <img src="./img/bikcraft.svg" alt="Bikcraft">
+  ```
+  Este link aponta para uma imagem SVG local que serve como logo da empresa.
+
+- **Imagens de produtos e introdução**:
+  ```html
+  <img src="./img/fotos/introducao.jpg" alt="Bicicleta elétrica preta.">
+  <img src="./img/bicicletas/magic-home.jpg" alt="Bicicleta Preta">
+  <img src="./img/bicicletas/nebula-home.jpg" alt="Bicicleta Preta">
+  <img src="./img/bicicletas/nimbus-home.jpg" alt="Bicicleta Preta">
+  ```
+  Esses links apontam para imagens locais que são usadas para ilustrar os produtos e a introdução da página.
+
+### 4. **Meta Tags**
+- **Meta tags para SEO e responsividade**:
+  ```html
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.">
+  ```
+  Essas meta tags são importantes para definir o conjunto de caracteres, ajustar a largura do layout com base na tela do dispositivo e melhorar a otimização para motores de busca (SEO).
+---
+## Como executar
+1. Baixe o arquivo.zip do repositorio.
+2. Descompacte o mesmo.
+3. Clique duas vezes sobre o arquivo index.html.
+---
